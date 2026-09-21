@@ -1,1 +1,0 @@
-Upload ALL files from this folder directly into the repository root. No folders are needed.
