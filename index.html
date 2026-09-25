@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta name="theme-color" content="#12151a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Parking Drift Tech Demo</title>
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" aria-label="Parking Drift Tech Demo"></canvas>
+    <div id="debug"></div>
+    <div id="hint">DRIFT TECH DEMO</div>
+    <div id="stick" class="control"><span></span></div>
+    <div id="pedals">
+      <button id="brake" class="button brake">Тормоз</button>
+      <button id="handbrake" class="button handbrake">Ручник</button>
+      <button id="throttle" class="button throttle">Газ</button>
+    </div>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>

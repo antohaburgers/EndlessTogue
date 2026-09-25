@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #0d1014; font-family: system-ui, sans-serif; touch-action: none; user-select: none; }
+#app, #game { position: fixed; inset: 0; width: 100%; height: 100%; }
+#game { display: block; }
+#hint { position: fixed; top: max(12px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); color: #c9d1d9; opacity: .55; font-size: 11px; letter-spacing: .2em; pointer-events: none; }
+#debug { position: fixed; top: 16px; left: 16px; color: #dce6ee; font: 12px/1.45 ui-monospace, monospace; white-space: pre; pointer-events: none; text-shadow: 0 1px 2px #000; }
+.control { position: fixed; left: max(22px, env(safe-area-inset-left)); bottom: max(22px, env(safe-area-inset-bottom)); width: min(30vw, 190px); height: min(30vw, 190px); border-radius: 50%; background: rgba(14,20,26,.38); border: 1px solid rgba(255,255,255,.16); box-shadow: inset 0 0 28px rgba(0,0,0,.25); }
+.control span { position: absolute; width: 42%; height: 42%; left: 29%; top: 29%; border-radius: 50%; background: rgba(220,230,238,.45); border: 1px solid rgba(255,255,255,.5); box-shadow: 0 4px 16px rgba(0,0,0,.35); }
+#pedals { position: fixed; right: max(22px, env(safe-area-inset-right)); bottom: max(22px, env(safe-area-inset-bottom)); width: min(37vw, 280px); height: min(30vw, 190px); display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; }
+.button { border: 1px solid rgba(255,255,255,.2); border-radius: 15px; color: #e9f1f6; background: rgba(23,30,37,.66); font-weight: 700; font-size: clamp(11px, 2vw, 15px); letter-spacing: .04em; touch-action: none; -webkit-tap-highlight-color: transparent; }
+.button:active, .button.active { background: rgba(213,71,48,.78); transform: scale(.97); }
+.throttle { grid-row: 1 / 3; grid-column: 2; background: rgba(36,89,65,.68); font-size: clamp(13px, 2.5vw, 19px); }
+.throttle:active, .throttle.active { background: rgba(63,153,93,.85); }
+.handbrake { background: rgba(104,62,40,.7); }
+@media (orientation: portrait) { #app::after { content: 'Поверните телефон горизонтально'; position: fixed; inset: 0; display: grid; place-items: center; background: #0d1014; color: #dce6ee; font-size: 18px; z-index: 10; } }
